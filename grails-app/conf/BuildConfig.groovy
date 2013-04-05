@@ -5,6 +5,12 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
+grails.project.repos.taktik.url = "http://maven.taktik.be/nexus/content/groups/public"
+grails.project.repos.default = "taktik"
+grails.project.repos.taktik.type = "maven"
+grails.project.repos.taktik.username = "aduchate"
+grails.project.repos.taktik.password = "m0slnd@"
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
