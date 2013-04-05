@@ -88,7 +88,7 @@
 			</div>
 	    	<div class="span4">
 		    	<div class="center">
-					<img class="" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'flags_preview_large.png')}" height="145"/>
+					<img class="" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'flags_preview_large.png')}"/>
 					<h3>Language Selector</h3>
 				</div>
 				<p>Kickstart contains a language selector that uses the <a href="http://www.famfamfam.com/lab/icons/flags/">FamFamFam flag icons</a> by Mark James.

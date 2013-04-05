@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: '_DemoPage.label', default: '_DemoPage')}" />
-	<title><g:message code="default.edit.label" args="[entityName]" /></title>
+	<title><g:message code="default.edit.label" args="${[message(code:"controller.${params.controller}")]}" /></title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 	</div>
 	</g:hasErrors>
 
-	<g:form method="post" class="form-horizontal"  enctype="multipart/form-data">
+	<g:form useToken="true" method="post" class="form-horizontal"  enctype="multipart/form-data">
 		<g:hiddenField name="id" value="${_DemoPageInstance?.id}" />
 		<g:hiddenField name="version" value="${_DemoPageInstance?.version}" />
 		<fieldset class="form">

@@ -11,7 +11,7 @@ class KickstartFilters {
 				//	log.info(!params.controller ? '/: ' + params : params.controller +"."+(params.action ?: "index")+": "+params)
 
 				if (params.layout) 				session.layout	= params.layout
-				if (params.skin)				session.skin 	= params.skin
+//				if (params.skin)				session.skin 	= params.skin
 //				if (!session.skin)				session.skin 	= "bootstrap"
 
 				// Identify RTL (right-to-left) languages

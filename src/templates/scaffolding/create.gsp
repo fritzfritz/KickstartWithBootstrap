@@ -19,7 +19,7 @@
 	</div>
 	</g:hasErrors>
 	
-	<g:form action="save" class="form-horizontal" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+	<g:form useToken="true" action="save" class="form-horizontal" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 		<fieldset class="form">
 			<g:render template="form"/>
 		</fieldset>

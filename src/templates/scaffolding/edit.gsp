@@ -19,7 +19,7 @@
 	</div>
 	</g:hasErrors>
 
-	<g:form method="post" class="form-horizontal" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+	<g:form useToken="true" method="post" class="form-horizontal" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 		<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 		<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 		<fieldset class="form">
