@@ -11,11 +11,7 @@ This plugin provides the following feature:
 * Adapted scaffolding templates for standard CRUD pages using the Bootstrap web page template by Twitter.
 * Initial set of webpages to describe the website (e.g., about.gsp, contact.gsp, and systeminfo.gsp)
 * A language picker that adapts to the available property files in the i18n directory. Using the FamFamFam flag icons.
-* A layout (non-/responsive) and less-based skin selector (switches between two different bootstrap versions in less format)
-** The skin selector can change the design between the original (bright) Bootstrap and the free (dark) variant called [http://bootswatch.com/cyborg/ "Cyborg"] 
 * A minimal console logging filter (KickstartFilter.groovy) to help understand which actions are called and params are transmitted
-* A script to calculate a simple build number and extract versioning build numbers (in _Events.groovy)
-* A script to calculate simple code metrics (lines of code (LOC) and number of files) (in _Events.groovy)
 
 == Technologies ==
 {| style="border-width: 0px; text-align: center;" 
@@ -65,8 +61,7 @@ Since version 0.9 two config variables are available and can be set in Config.gr
 * '''kickstart.build.calculate''' can be used to disable the calculation of build numbers and defaults to '''true''' 	
 * '''kickstart.metrics.calculate''' can be used to disable the calculation of metrics and defaults to '''true''' 
 
-Furthermore, the views can be configured using the following settings / variables, which have to be defined in the <head> section with the scope "request". An exemplary use of this can be found in the file login/auth.gsp:
-   <g:set var="layout_nomainmenu" value="${true}" scope="request"/>
+Furthermore, the views can be configured using the following settings / variables, which have to be defined in the <head> section with the scope "request". An exemplary use of this can be found in the file login/auth.gsp.
 
 Currently, the following settings for the views are supported:
 * '''layout_nomainmenu''' to remove the main menu (e.g., containing "Home") in the file "_content_grid.gsp"
@@ -90,6 +85,11 @@ Please note that the '''datepicker''' can handle dates after the year 9999 while
 ** see http://joerg-rech.com and follow @JoergRech
 
 == Changelog ==
+'''0.9.6''' Updated to Bootstrap 2.3.1 with lesscss 1.3.3 <br/>
+'''0.9.5''' Reduced to the max: removed skin/layout switching. Removed build and metrics calculation. Works on PAAS with less files. <br/>
+'''0.9.4''' Integrated Font Awesome using the Grails Font Awesome Resources Plugin by Eamonn O'Connell<br/>
+'''0.9.3''' Upgrade to patched Bootstrap 2.3.0 (had to partially downgrade mixins.less to 2.2.2). Fixed problem with hibernate plugin dependency when using Grails versions less than 2.2.0. <br/>
+'''0.9.2''' Fixed problem with less file handling if resource plugin is disabled. <br/>
 '''0.9.1''' Added views for security (prepared for spring security: auth.gsp and denied.gsp). Integrated configuration settings for views. Updated several missing I18N codes.<br/>
 '''0.9.0''' Added config switches to calculate build numbers and metrics. Updated to Bootstrap 2.2.2 (2.3 has currently compilation errors with lesscss).<br/>
 '''0.8.9''' Fixed Bug with CloudFoundry and Tomcat which (now) need references to the plugin containing resources (e.g., images)<br/>

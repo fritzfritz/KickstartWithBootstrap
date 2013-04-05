@@ -26,22 +26,7 @@
 			general GSPs pages (e.g., about.gsp), a minimal logging/orientation
 			Filter, and a language switcher.
 		</p>
-		<h3>Next Steps</h3>
-		<p>
-			If you want to provide an authentication system I recommend 
-			<a href="http://grails.org/plugin/spring-security-core">Spring Security</a>. 
-			Kickstart comes with views for the login and denied views. 
-		</p>
-		<ol>
-			<li>Enable spring-security-core in BuildConfig.groovy, e.g.: <pre>compile ":spring-security-core:1.2.7.3"</pre> </li>
-			<li>Clean or compile your app to load the plugin</li>
-			<li>Execute the <a href="http://grails-plugins.github.com/grails-spring-security-core/docs/manual/ref/Scripts/s2-quickstart.html">s2-quickstart script</a> to generate the required domain classes <pre>grails s2-quickstart com.yourapp User Role</pre></li>
-			<ul>
-				<li>BUT replace "com.yourapp" with your package structure (e.g., "com.${meta(name:'app.name')}.security")</li>
-				<li>Do not overwrite the views auth.gsp and denied.gsp (or copy them again from the Kickstart plugin)</li>
-			</ul>
-			<li>Set security configuration in your Config.groovy (see <a href="http://grails-plugins.github.com/grails-spring-security-core/docs/manual/guide/5%20Configuring%20Request%20Mappings%20to%20Secure%20URLs.html#5.2%20Simple%20Map%20in%20Config.groovy">here</a>)</li>
-		</ol>
+		<g:link class="btn btn-large btn-primary" controller="nextSteps">Next Steps</g:link>
 	</section>
 
 	<section id="info">
@@ -49,7 +34,7 @@
 	    	<div class="span4">
 		    	<div class="center">
 					<img class="frontpageImage" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'bs-docs-twitter-github.png')}" />
-					<h3>Bootstrap 2.2.2</h3>
+					<h3>Bootstrap 2.3.0</h3>
 				</div>
 				<p>Kickstart uses <a href ="http://twitter.github.com/bootstrap/">Bootstrap</a> to render the web pages. 
 				Bootstrap is made by Mark Otto (<a href="http://twitter.com/mdo">@mdo</a>) and Billy Gates (<a href="http://twitter.com/fat">@fat</a>).
@@ -58,10 +43,13 @@
 			</div>
 	    	<div class="span4">
 		    	<div class="center">
-					<img class="frontpageImage" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'browser_logos.png')}" />
-					<h3>Browser support</h3>
+					<i class="icon-flag icon-7x" style="font-size: 7em;"></i>
+					<h3>Font Awesome 3.0.2</h3>
 				</div>
-				<p>Bootstrap is tested and supported in major modern browsers like Chrome 14, Safari 5+, Opera 11, Internet Explorer 7, and Firefox 5.</p>
+				<p>Kickstart uses <a href ="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> to render scalable icons using a vector font. 
+				Font Awesome is a pictographic language of web-related actions by Dave Gandy.
+				Font Awesome icons are vectors, which mean they're gorgeous on high-resolution displays.  
+				</p>
 			</div>
 	    	<div class="span4">
 		    	<div class="center">
@@ -88,7 +76,7 @@
 			</div>
 	    	<div class="span4">
 		    	<div class="center">
-					<img class="" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'flags_preview_large.png')}"/>
+					<img class="" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'flags_preview_large.png')}" />
 					<h3>Language Selector</h3>
 				</div>
 				<p>Kickstart contains a language selector that uses the <a href="http://www.famfamfam.com/lab/icons/flags/">FamFamFam flag icons</a> by Mark James.
@@ -96,16 +84,22 @@
 			</div>
 	    	<div class="span4">
 		    	<div class="center">
-					<img class="" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'components.jpg')}" />
-					<h3>Other Feature</h3>
+					<img class="frontpageImage" src="${resource(plugin: 'kickstart-with-bootstrap', dir: 'images/frontpage',file: 'browser_logos.png')}" />
+					<h3>Browser support</h3>
 				</div>
-				<p>Kickstart contains several pages as starting points for the average website such as an About Page, Contact Page, 404, etc.</p>
+				<p>Bootstrap is tested and supported in major modern browsers like Chrome 14, Safari 5+, Opera 11, Internet Explorer 7, and Firefox 5.</p>
 			</div>
 	    </div>
 	</section>
 
 	<section id="info3">
 		<div class="row">
+	    	<div class="span4">
+		    	<div class="center">
+					<h3>Other Features</h3>
+				</div>
+				<p>Kickstart contains several pages as starting points for the average website such as an About Page, Contact Page, 404, etc.</p>
+			</div>
 	    	<div class="span4">
 		    	<div class="center">
 					<h3>Usage</h3>
@@ -122,26 +116,25 @@
 				</div>
 				<p></p>
 				<ul>
-					<li>Currently, Kickstart works with Grails 2.0 and 2.1!</li>
-					<li>Kickstart only uses the CSS version of Bootstrap (currently, no less).</li>
-					<li>It does NOT use the Bootstrap plugin.</li>
+					<li>Currently, Kickstart works with Grails 2.x!</li>
+					<li>Kickstart does NOT use the Bootstrap plugin.</li>
 					<li>I18N is only available for English and German!</li>
 				</ul>
 			</div>
-	    	<div class="span4">
-		    	<div class="center">
-					<h3>Terms of Use</h3>
-				</div>
-				<p></p>
-				<ul>
-					<li>Bootstrap (from Twitter): Code licensed under the Apache
-						License v2.0. Documentation licensed under CC BY 3.0.
-						(<a href="http://twitter.com/TwBootstrap">@TwBootstrap</a> , <a href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/</a>)</li>
-					<li>Kickstart Plugins: Code licensed under the Apache License
-						v2.0. Documentation licensed under CC BY 3.0. Copyright 2011 Jörg
-						Rech (<a href="http://twitter.com/JoergRech">@JoergRech</a>, <a href="http://joerg-rech.com">http://joerg-rech.com</a>)</li>
-				</ul>
-			</div>
+<%--	    	<div class="span4">--%>
+<%--		    	<div class="center">--%>
+<%--					<h3>Terms of Use</h3>--%>
+<%--				</div>--%>
+<%--				<p></p>--%>
+<%--				<ul>--%>
+<%--					<li>Bootstrap (from Twitter): Code licensed under the Apache--%>
+<%--						License v2.0. Documentation licensed under CC BY 3.0.--%>
+<%--						(<a href="http://twitter.com/TwBootstrap">@TwBootstrap</a> , <a href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/</a>)</li>--%>
+<%--					<li>Kickstart Plugins: Code licensed under the Apache License--%>
+<%--						v2.0. Documentation licensed under CC BY 3.0. Copyright 2011 Jörg--%>
+<%--						Rech (<a href="http://twitter.com/JoergRech">@JoergRech</a>, <a href="http://joerg-rech.com">http://joerg-rech.com</a>)</li>--%>
+<%--				</ul>--%>
+<%--			</div>--%>
 	    </div>
 
 	</section>
