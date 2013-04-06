@@ -9,7 +9,17 @@ if (typeof jQuery !== 'undefined') {
             $checkbox.change();
 			$(this).addClass("btn-primary")
 			$(this).siblings().removeClass("btn-primary")
-            $(this).parent
+            $.each($checkbox.data('group').split(','),function(idx,checkbox) {
+                if ($(checkbox).attr('checked')) {
+                    $(checkbox).attr('checked', false);
+                    $(checkbox).siblings('.radiocheckbox').children('.btn.on').each(function(idx,other) {
+                        $(other).removeClass("btn-primary")
+                        $(other).removeClass("active")
+                        $(other).siblings().addClass("btn-primary")
+                        $(other).siblings().addClass("active")
+                    })
+                }
+            });
 		})
         $('body').on('click.checkbox','.radiocheckbox .btn.off:not(.readonly)',function() {
 			var $checkbox = $(this).parent().siblings("input[type=checkbox]")

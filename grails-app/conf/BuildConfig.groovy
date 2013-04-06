@@ -5,7 +5,7 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
-grails.project.repos.taktik.url = "http://maven.taktik.be/nexus/content/groups/public"
+grails.project.repos.taktik.url = "http://maven.taktik.be/nexus/content/repositories/releases"
 grails.project.repos.default = "taktik"
 grails.project.repos.taktik.type = "maven"
 grails.project.repos.taktik.username = "aduchate"
