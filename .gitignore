@@ -42,3 +42,9 @@ local.properties
 
 # PDT-specific
 .buildpath
+
+/kickstartWithBootstrapGrailsPlugin-grailsPlugins.iml
+/KickstartWithBootstrapGrailsPlugin.groovy.orig
+/kickstartWithBootstrapGrailsPlugin.iml
+/kickstartWithBootstrapGrailsPlugin.ipr
+/kickstartWithBootstrapGrailsPlugin.iws
