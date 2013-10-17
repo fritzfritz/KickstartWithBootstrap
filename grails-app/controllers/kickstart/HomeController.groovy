@@ -1,3 +1,5 @@
+package kickstart
+
 class HomeController {
 
 
