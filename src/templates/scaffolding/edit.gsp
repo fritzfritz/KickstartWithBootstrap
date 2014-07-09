@@ -1,5 +1,5 @@
 <%=packageName%>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>

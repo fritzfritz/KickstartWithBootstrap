@@ -33,17 +33,13 @@ grails.project.dependency.resolution = {
 		compile 'org.taktik.commons:commons-uti:1.1-SNAPSHOT'
 	}
 	plugins {
-//		runtime	(":hibernate:$grailsVersion")		{ export = false }		// needed for testing the plugin as an app
-//		build	(":tomcat:$grailsVersion")			{ export = false }		// needed for testing the plugin as an app
-//		build	(":rest-client-builder:1.0.3")		{ export = false }		// needed for plugin deployment
-		build(":release:2.2.1") { export = false }    // needed for plugin deployment
+        build(	":release:3.0.1",
+              	":rest-client-builder:1.0.3") {
+            export = false
+        }
+		compile ":scaffolding:2.0.1"									// Needed since Grails 2.3
 
-		runtime(":jquery:1.8.3") { export = true }    // needed for the Bootstrap datepicker
-//		runtime	(":jquery:1.10.2")					{ export = true }		// WARN: does not work with Bootstrap Datepicker !
-		runtime(":resources:1.2") { export = true }    // needed for Bootstrap's less files
-
-		compile(":lesscss-resources:1.3.3") { export = true }    // needed for Bootstrap's less files
-
-		compile(":font-awesome-resources:3.2.1.2") { export = true }    // needed for Bootstrap's image replacement
+		runtime	":resources:1.2.1"										// Needed for Bootstrap's less files
+		compile	":lesscss-resources:1.3.3"								// Needed for Bootstrap's less files
 	}
 }

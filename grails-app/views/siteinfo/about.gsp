@@ -9,10 +9,6 @@
 
 	<section id="intro">
 		<h1><g:message code="default.welcome.title" args="[meta(name:'app.name')]"/></h1>
-		<p class="lead">
-			${meta(name:'app.name')}
-			is the hottest System since sliced bread!
-		</p>
 	</section>
 
 	<section id="additional">
