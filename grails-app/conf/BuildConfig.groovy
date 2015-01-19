@@ -2,11 +2,7 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 
-grails.project.repos.taktik.url = "http://maven.taktik.be/nexus/content/repositories/snapshots"
 grails.project.repos.default = "taktik"
-grails.project.repos.taktik.type = "maven"
-grails.project.repos.taktik.username = "aduchate"
-grails.project.repos.taktik.password = "m0slnd@"
 
 grails.project.dependency.resolution = {
 	// inherit Grails' default dependencies
@@ -16,17 +12,11 @@ grails.project.dependency.resolution = {
 	}
 	log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
 	repositories {
-		mavenRepo "http://maven.taktik.be/nexus/content/groups/public"
+		mavenRepo(id: 'maven.taktik.be', url: 'http://maven.taktik.be/nexus/content/groups/public/')
 
 		grailsCentral()
 		mavenLocal()
 		mavenCentral()
-	}
-	credentials {
-		realm = "Sonatype Nexus Repository Manager"
-		host = "maven.taktik.be"
-		username = "aduchate "
-		password = "m0slnd@"
 	}
 	dependencies {
 		// specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
@@ -37,9 +27,9 @@ grails.project.dependency.resolution = {
               	":rest-client-builder:1.0.3") {
             export = false
         }
-		compile ":scaffolding:2.0.1"									// Needed since Grails 2.3
+		compile ":scaffolding:2.1.2"
+		compile ":asset-pipeline:1.9.9"
+		compile ":less-asset-pipeline:1.10.0"
 
-		runtime	":resources:1.2.1"										// Needed for Bootstrap's less files
-		compile	":lesscss-resources:1.3.3"								// Needed for Bootstrap's less files
 	}
 }

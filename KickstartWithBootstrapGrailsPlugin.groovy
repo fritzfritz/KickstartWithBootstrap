@@ -3,20 +3,20 @@ import kickstart.CustomDateEditorRegistrar
 class KickstartWithBootstrapGrailsPlugin {
 
 	def title           = "Kickstart with Bootstrap - Good looking websites!"
-	def version         = "1.1.0"
+	def version         = "0.9.8-SNAPSHOT"
 	def license         = "APACHE"
 	def description     = """\
 Kickstart is a plugin for Grails to start your project with a good looking frontend. \
 It provides adapted scaffolding templates for standard CRUD pages using the Bootstrap \
 frontend framework initiated by Twitter."""
 
-    def grailsVersion  = "2.3 > * "
+    def grailsVersion  = "2.4 > * "
 	def pluginExcludes  = [
 		'web-app/WEB-INF/**'
 	]
 
 	def developers      = [
-		[ name: "Jörg Rech", email: "joerg.rech@gmail.com" ]
+		[ name: "Joerg Rech", email: "joerg.rech@gmail.com" ]
 	]
 	def documentation   = "http://grails.org/plugin/kickstart-with-bootstrap"
 	def scm             = [ url: "https://github.com/joergrech/KickstartWithBootstrap" ]
