@@ -7,19 +7,22 @@ if (typeof jQuery !== 'undefined') {
 			var $checkbox = $(this).parent().siblings("input[type=checkbox]")
 			$checkbox.attr('checked', true);
             $checkbox.change();
-			$(this).addClass("btn-primary")
-			$(this).siblings().removeClass("btn-primary")
-            $.each($checkbox.data('group').split(','),function(idx,checkbox) {
-                if ($(checkbox).attr('checked')) {
-                    $(checkbox).attr('checked', false);
-                    $(checkbox).siblings('.radiocheckbox').children('.btn.on').each(function(idx,other) {
-                        $(other).removeClass("btn-primary")
-                        $(other).removeClass("active")
-                        $(other).siblings().addClass("btn-primary")
-                        $(other).siblings().addClass("active")
-                    })
-                }
-            });
+			$(this).addClass("btn-primary");
+			$(this).siblings().removeClass("btn-primary");
+			var group = $checkbox.data('group');
+			if (group) {
+				$.each(group.split(','), function (idx, checkbox) {
+					if ($(checkbox).attr('checked')) {
+						$(checkbox).attr('checked', false);
+						$(checkbox).siblings('.radiocheckbox').children('.btn.on').each(function (idx, other) {
+							$(other).removeClass("btn-primary");
+							$(other).removeClass("active");
+							$(other).siblings().addClass("btn-primary");
+							$(other).siblings().addClass("active");
+						})
+					}
+				});
+			}
 		})
         $('body').on('click.checkbox','.radiocheckbox .btn.off:not(.readonly)',function() {
 			var $checkbox = $(this).parent().siblings("input[type=checkbox]")
